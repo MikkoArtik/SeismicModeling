@@ -2,10 +2,10 @@
 	"model": [
 		{
 			"top": 0,
-			"bottom": 500,
+			"bottom": 133.2,
 			"v_p": 1200,
 			"v_s": 600,
-			"density": 1.822
+			"density": 2
 		},
 		{
 			"top": 500,
