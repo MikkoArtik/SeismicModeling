@@ -85,6 +85,12 @@ class Model:
         return self.src_data['source']['depth']
 
     @property
+    def spectrum_time_limits(self) -> Tuple[float, float]:
+        t_min = self.src_data['spectrum']['t_min']
+        t_max = self.src_data['spectrum']['t_max']
+        return t_min, t_max
+
+    @property
     def sources_array(self) -> np.ndarray:
         source_depth = self.source_depth
         sources = np.zeros(shape=(0, 2))

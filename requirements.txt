@@ -80,3 +80,4 @@ traitlets==5.1.0
 urllib3==1.26.7
 wcwidth==0.2.5
 zict==2.0.0
+matplotlib==3.4.3

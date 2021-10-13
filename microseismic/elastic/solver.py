@@ -122,15 +122,3 @@ class Elastic2DReflectionSolver:
                       subs=self.model.devito_model.grid.spacing_map)
         op.apply(dt=dt)
         plot_image(v[1].data[1], cmap="seismic")
-
-
-if __name__ == '__main__':
-    root_folder = '/media/michael/Data/Projects/ZapolarnoeDeposit/2021/' \
-                  'Modeling/scratches/models'
-    file_path = 'test_model.json'
-    model = Model(os.path.join(root_folder, file_path), is_reflection=True)
-
-    solver = Elastic2DReflectionSolver(model)
-    solver.run()
-
-    solver.save_v_to_file(root_folder, 'z')
