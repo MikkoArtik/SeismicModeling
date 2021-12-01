@@ -1,0 +1,298 @@
+{
+	"model": [
+		{
+			"top": 0,
+			"bottom": 113.2,
+			"v_p": 1500,
+			"v_s": 750,
+			"density": 1.9
+		},
+		{
+			"top": 113.2,
+			"bottom": 163.2,
+			"v_p": 2041,
+			"v_s": 1020.5,
+			"density": 2.08
+		},
+		{
+			"top": 163.2,
+			"bottom": 253.2,
+			"v_p": 2346,
+			"v_s": 1173,
+			"density": 2.15
+		},
+		{
+			"top": 253.2,
+			"bottom": 343.2,
+			"v_p": 1871,
+			"v_s": 935.5,
+			"density": 2.04
+		},
+		{
+			"top": 343.2,
+			"bottom": 433.2,
+			"v_p": 2080,
+			"v_s": 1040,
+			"density": 2.09
+		},
+		{
+			"top": 433.2,
+			"bottom": 523.2,
+			"v_p": 1959,
+			"v_s": 979.5,
+			"density": 2.06
+		},
+		{
+			"top": 523.2,
+			"bottom": 613.2,
+			"v_p": 2404,
+			"v_s": 1202,
+			"density": 2.17
+		},
+		{
+			"top": 613.2,
+			"bottom": 763.2,
+			"v_p": 2256,
+			"v_s": 1128,
+			"density": 2.09
+		},
+		{
+			"top": 763.2,
+			"bottom": 973.2,
+			"v_p": 2416,
+			"v_s": 1208,
+			"density": 2.17
+		},
+		{
+			"top": 973.2,
+			"bottom": 1063.2,
+			"v_p": 2486,
+			"v_s": 1243,
+			"density": 2.19
+		},
+		{
+			"top": 1063.2,
+			"bottom": 1153.2,
+			"v_p": 2653,
+			"v_s": 1326.5,
+			"density": 2.22
+		},
+		{
+			"top": 1153.2,
+			"bottom": 1243.2,
+			"v_p": 2501,
+			"v_s": 1250.5,
+			"density": 2.19
+		},
+		{
+			"top": 1243.2,
+			"bottom": 1302,
+			"v_p": 2618,
+			"v_s": 1309,
+			"density": 2.21
+		},
+		{
+			"top": 1302,
+			"bottom": 1432,
+			"v_p": 2618,
+			"v_s": 1309,
+			"density": 2.21,
+			"is_anomaly": true,
+			"name": "senoman"
+		},
+		{
+			"top": 1432,
+			"bottom": 1453.2,
+			"v_p": 2618,
+			"v_s": 1309,
+			"density": 2.21
+		},
+		{
+			"top": 1453.2,
+			"bottom": 1543.2,
+			"v_p": 2849,
+			"v_s": 1424.5,
+			"density": 2.26
+		},
+		{
+			"top": 1543.2,
+			"bottom": 1723.2,
+			"v_p": 2988,
+			"v_s": 1494,
+			"density": 2.29
+		},
+		{
+			"top": 1723.2,
+			"bottom": 1903.2,
+			"v_p": 3175,
+			"v_s": 1587.5,
+			"density": 2.32
+		},
+		{
+			"top": 1903.2,
+			"bottom": 1993.2,
+			"v_p": 3093,
+			"v_s": 1546.5,
+			"density": 2.31
+		},
+		{
+			"top": 1993.2,
+			"bottom": 2203.2,
+			"v_p": 3528,
+			"v_s": 1764,
+			"density": 2.39
+		},
+		{
+			"top": 2203.2,
+			"bottom": 2293.2,
+			"v_p": 3695,
+			"v_s": 1847.5,
+			"density": 2.41
+		},
+		{
+			"top": 2293.2,
+			"bottom": 2583.2,
+			"v_p": 3844,
+			"v_s": 1922,
+			"density": 2.44
+		},
+		{
+			"top": 2583.2,
+			"bottom": 2673.2,
+			"v_p": 4146,
+			"v_s": 2073,
+			"density": 2.48
+		},
+		{
+			"top": 2633.2,
+			"bottom": 2763.2,
+			"v_p": 3811,
+			"v_s": 1905.5,
+			"density": 2.43
+		},
+		{
+			"top": 2763.2,
+			"bottom": 2863.2,
+			"v_p": 4288,
+			"v_s": 2144,
+			"density": 2.51
+		},
+		{
+			"top": 2863.2,
+			"bottom": 2921,
+			"v_p": 4169,
+			"v_s": 2084.5,
+			"density": 2.49
+		},
+		{
+			"top": 2921,
+			"bottom": 2953.2,
+			"v_p": 4169,
+			"v_s": 2084.5,
+			"density": 2.49,
+			"is_anomaly": true,
+			"name": "niokom"
+		},
+		{
+			"top": 2953.2,
+			"bottom": 3043.2,
+			"v_p": 4368,
+			"v_s": 2184,
+			"density": 2.52,
+			"is_anomaly": true,
+			"name": "niokom"
+		},
+		{
+			"top": 3043.2,
+			"bottom": 3185,
+			"v_p": 4036,
+			"v_s": 2018,
+			"density": 2.47,
+			"is_anomaly": true,
+			"name": "niokom"
+		},
+		{
+			"top": 3185,
+			"bottom": 3343.2,
+			"v_p": 4036,
+			"v_s": 2018,
+			"density": 2.47
+		},
+		{
+			"top": 3343.2,
+			"bottom": 3433.2,
+			"v_p": 3873,
+			"v_s": 1936.5,
+			"density": 2.44
+		},
+		{
+			"top": 3433.2,
+			"bottom": 3523.2,
+			"v_p": 2936,
+			"v_s": 1468,
+			"density": 2.28
+		},
+		{
+			"top": 3523.2,
+			"bottom": 3623.2,
+			"v_p": 3336,
+			"v_s": 1668,
+			"density": 2.35
+		},
+		{
+			"top": 3623.2,
+			"bottom": 3743.2,
+			"v_p": 3009,
+			"v_s": 1504.5,
+			"density": 2.29
+		},
+		{
+			"top": 3743.2,
+			"bottom": 3880,
+			"v_p": 3142,
+			"v_s": 1571,
+			"density": 2.32
+		}
+	],
+	"geometry": {
+		"x_extent": 2000,
+		"y_extent": 3850,
+		"space": 10
+	},
+	"sensors": {
+        	"x_start": 1000,
+        	"depth": 0,
+        	"space": 10,
+        	"amount": 100
+   	},
+	"sources": {
+		"x_start": 1000,
+		"depth": 1120,
+		"space": 10,
+		"amount": 1,
+		"type": "Ricker",
+		"frequency": 3.2
+	},
+	"timeline": {
+		"t0": 0,
+		"tn": 300,
+		"dt": 0.001
+	},
+	"parameters": {
+		"space_order": 5,
+		"time_order": 2,
+		"nbl": 10
+	},
+    "export": {
+        "signal": {
+            "filename": "signals.dat"
+        },
+        "spectrum": {
+    	"t_min": 0,
+      	"t_max": 300,
+		"f_min": 0,
+		"f_max": 20,
+		"name": "spectrum_basic_model.dat"
+        }
+    }
+}
