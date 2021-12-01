@@ -81,28 +81,76 @@ class Model:
         return nx, ny
 
     @property
+    def sensors_x_start(self) -> float:
+        return self.src_data['sensors']['x_start']
+
+    @property
+    def sensors_depth(self) -> float:
+        return self.src_data['sensors']['depth']
+
+    @property
+    def sensors_space(self) -> float:
+        return self.src_data['sensors']['space']
+
+    @property
+    def sensors_count(self) -> int:
+        return self.src_data['sensors']['amount']
+
+    @property
+    def sources_x_start(self) -> float:
+        return self.src_data['sources']['x_start']
+
+    @property
     def source_depth(self) -> float:
-        return self.src_data['source']['depth']
+        return self.src_data['sources']['depth']
+
+    @property
+    def sources_space(self) -> float:
+        return self.src_data['sources']['space']
+
+    @property
+    def sources_count(self) -> int:
+        return self.src_data['sources']['amount']
 
     @property
     def spectrum_time_limits(self) -> Tuple[float, float]:
-        t_min = self.src_data['spectrum']['t_min']
-        t_max = self.src_data['spectrum']['t_max']
+        t_min = self.src_data['export']['spectrum']['t_min']
+        t_max = self.src_data['export']['spectrum']['t_max']
         return t_min, t_max
 
     @property
+    def spectrum_freq_limits(self) -> Tuple[float, float]:
+        f_min = self.src_data['export']['spectrum']['f_min']
+        f_max = self.src_data['export']['spectrum']['f_max']
+        return f_min, f_max
+
+    @property
+    def spectrum_export_file_name(self) -> str:
+        return self.src_data['export']['spectrum']['name']
+
+    @property
     def sources_array(self) -> np.ndarray:
-        source_depth = self.source_depth
+        depth = self.source_depth
+        x_start = self.sources_x_start
+        space = self.sources_space
         sources = np.zeros(shape=(0, 2))
-        for i in range(self.shape[0]):
-            sources = np.vstack((sources, [i * self.space, source_depth]))
+
+        for i in range(self.sources_count):
+            x = x_start + i * space
+            sources = np.vstack((sources, [x, depth]))
         return sources
 
     @property
-    def sensor_array(self) -> np.ndarray:
-        x = self.src_data['sensor']['x']
-        y = self.src_data['sensor']['y']
-        return np.array([[x, y]])
+    def sensors_array(self) -> np.ndarray:
+        depth = self.sensors_depth
+        x_start = self.sensors_x_start
+        space = self.sensors_space
+        sensors = np.zeros(shape=(0, 2))
+
+        for i in range(self.sensors_count):
+            x = x_start + i * space
+            sensors = np.vstack((sensors, [x, depth]))
+        return sensors
 
     @property
     def nbl(self) -> int:
@@ -164,11 +212,11 @@ class Model:
         t0 = self.src_data['timeline']['t0'] * 1000
         tn = self.src_data['timeline']['tn'] * 1000
 
-        source_type = self.src_data['source']['type']
-        source_frequency = self.src_data['source']['frequency'] / 1000
+        source_type = self.src_data['sources']['type']
+        source_frequency = self.src_data['sources']['frequency'] / 1000
 
         geometry = AcquisitionGeometry(model=self.devito_model,
-                                       rec_positions=self.sensor_array,
+                                       rec_positions=self.sensors_array,
                                        src_positions=self.sources_array,
                                        t0=t0, tn=tn, src_type=source_type,
                                        f0=source_frequency)
