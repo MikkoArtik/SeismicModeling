@@ -56,14 +56,14 @@ class Elastic2DReflectionSolver:
         else:
             raise Exception('Invalid component name')
 
-        discrete_count = data.shape[0]
-        sensors_count = self.model.sensor_array.shape[0]
+        discrete_count = data.shape[0] - 1
+        sensors_count = self.model.sensors_array.shape[0]
         result = np.zeros(shape=(discrete_count, sensors_count + 1))
         result[:, 0] = np.linspace(0, discrete_count, discrete_count)
         result[:, 0] *= self.model.time_space / 1000
-        result[:, 0] = np.round(result[:, 0], 3)
+        result[:, 0] = np.round(result[:, 0], 4)
 
-        result[:-1, 1:] = data[:-1]
+        result[:, 1:] = data[:-1]
         return result
 
     def save_v_to_file(self, export_folder: str, component='z'):
@@ -79,7 +79,7 @@ class Elastic2DReflectionSolver:
     def run(self):
         plot_velocity(self.model.devito_model,
                       source=self.model.sources_array,
-                      receiver=self.model.sensor_array)
+                      receiver=self.model.sensors_array)
         lame = self.model.devito_model.lam
         mu = self.model.devito_model.mu
         inverse_density = self.model.devito_model.b
