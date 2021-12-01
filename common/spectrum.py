@@ -1,3 +1,5 @@
+from math import inf
+
 import numpy as np
 from numpy.fft import rfft, rfftfreq
 
@@ -29,7 +31,10 @@ class Spectrum:
         res[:, 1] = 2 * abs(spectrum_data) / signal_count
         return res
 
-    def save(self, output_path: str):
+    def save(self, output_path: str, freq_limits=(-inf, inf)):
         header = 'freq\tamp'
-        np.savetxt(output_path, self.spectrum_array, '%f', '\t', comments='',
+        arr = self.spectrum_array[:, 0]
+        condition = (arr >= freq_limits[0]) * (arr < freq_limits[1])
+        selection = self.spectrum_array[condition]
+        np.savetxt(output_path, selection, '%f', '\t', comments='',
                    header=header)
